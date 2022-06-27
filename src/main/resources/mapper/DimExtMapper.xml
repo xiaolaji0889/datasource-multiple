@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iflytek.datasourcemultiple.dao.DimExtDao">
+
+    <sql id="ALL_FIELDS">
+        ID,CODE_ID,CODE_NAME,PAR_CODE_ID,PAR_CODE_NAME,CENJI_ID,ORDER_NO,IS_CALL_API,
+            CREATE_BY,UPDATE_TIME,CREATE_TIME
+    </sql>
+
+    <select id="demoSelect" resultType="com.iflytek.datasourcemultiple.entity.DimExtDTO">
+        select <include refid="ALL_FIELDS" />
+            from dim_ext
+    </select>
+
+</mapper>
